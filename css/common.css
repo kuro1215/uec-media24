@@ -148,6 +148,18 @@ ul li {
   opacity: 1;
 }
 
+.link-button {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(30 41 59);
+  border-radius: 0.5rem;
+  font-size: large;
+}
+.link-button:hover {
+  background-color: rgb(30 41 59);
+  color: white;
+}
+
 footer > .links {
   display: flex;
   justify-content: center;
