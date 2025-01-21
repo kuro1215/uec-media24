@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', OnDOMContentLoaded);
 window.addEventListener('load', OnLoad);
 
 function OnDOMContentLoaded() {
-  fetch('../data/news.json')
+  fetch('./data/news.json')
 	.then(response => response.json())
 	.then(data => {
 	  const dataLength = data.length;
