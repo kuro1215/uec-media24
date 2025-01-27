@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>ご利用・ご見学案内 | UECコミュニケーションミュージアム</title>
+  <title>展示室 | UECコミュニケーションミュージアム</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Zen+Kurenaido&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 
-  <link rel="stylesheet" href="./css/pages.css">
+  <link rel="stylesheet" href="./css/rooms.css">
 </head>
 
 <body>
-  <header class="h-16" role="banner">
-    <div class="h-16 flex justify-between">
-      <a class="block m-3 " href="./index.html" >
+  <header>
+    <div class="h-full flex items-center justify-between">
+      <a class="block m-3" href="./index.html" >
         <img src="https://www.museum.uec.ac.jp/images/uec-museum-logo-64-home.png" alt="UEC Museum" class="w-48">
       </a>
       <button id="menu-button">
@@ -27,9 +27,9 @@
       </button>
     </div>
     <nav id="head-nav">
-      <details class="nav-content ">
-        <summary>ご利用案内</summary>
-        <div class="nav-indent">
+      <div class="nav-box">
+        <span class="nav-content">ホーム</span>
+        <div class="nav-sub">
           <a class="nav-content" href="./guide.html">
             <span>ご利用・ご見学案内</span>
           </a>
@@ -37,43 +37,30 @@
             <span>アクセス</span>
           </a>
         </div>
-      </details>
-      <details class="nav-content ">
-        <summary>展示室案内</summary>
-        <div class="nav-indent">
+      </div>
+      <div class="nav-box">
+        <span class="nav-content">展示室案内</span>
+        <div class="nav-sub">
           <a class="nav-content" href="./rooms.html">
-            <span>展示室紹介</span>
+            <span>展示室</span>
           </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room1/">
-            <span>第一展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room2/">
-            <span>第二展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room3/">
-            <span>第三展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room4/">
-            <span>第四展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room5/">
-            <span>第五展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room6/">
-            <span>第六展示室</span>
+          <a class="nav-content" href="./exhibits.html">
+            <span>展示品紹介</span>
           </a>
         </div>
-      </details>
-      <a class="nav-content" href="https://www.museum.uec.ac.jp/staff/">学術調査員</a>
+      </div>
+      <div class="nav-box">
+        <a class="nav-content" href="https://www.museum.uec.ac.jp/staff/">学術調査員</a>
+      </div>
     </nav>
   </header>
 
   <main class="mt-16">
     <div class="breadcrumbs">
-      <a href="./index.html">ホーム</a> &gt; <span>展示室紹介</span>
+      <a href="./index.html">ホーム</a> &gt; <span>展示室</span>
     </div>
     <div class="title">
-      <h1 class="text-3xl">展示室紹介</h1>
+      <h1 class="text-3xl">展示室</h1>
     </div>
 
     <section id="floor-map">
@@ -85,6 +72,132 @@
     <section id="visit-notes">
       <h2 class="index-title">展示室</h2>
       <div class="my-2">
+        <div class="room">
+          <div class="room-img">
+            <img src="https://www.museum.uec.ac.jp/images/room1.jpg">
+            <div>
+              <span class="text-3xl font-bold">第一展示室</span>
+              <span class="text-lg">無線通信機の歴史</span>
+            </div>
+          </div>
+          <div class="room-content">
+            火花放電を利用した初期の無線機に始まって、第二次世界大戦で使われた軍用無線機、大型の海上無線機、テレビ局用の大型アナログ送信機など無線通信や放送の歴史を作ってきた様々な機器を展示しています。
+            <div class="mt-1 text-end">
+              <a href="./exhibits.html?room=1" class="px-2 border-b">
+                <span class="align-top font-bold">展示品一覧</span>
+                <span class="align-top material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img">
+            <img src="https://www.museum.uec.ac.jp/images/room2.jpg">
+            <div>
+              <span class="text-3xl font-bold">第二展示室</span>
+              <span class="text-lg">オーディオ・コンピュータの歴史</span>
+            </div>
+          </div>
+          <div class="room-content">
+            電信・電話機、オーディオ、ラジオ、テレビ、コンピュータなど各種の機器を展示しています。また、発明家エジソンが約100年前に作ったエジソン蝋管蓄音機の音を聞くこともできます。
+            <div class="mt-1 text-end">
+              <a href="./exhibits.html?room=2" class="px-2 border-b">
+                <span class="align-top font-bold">展示品一覧</span>
+                <span class="align-top material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img">
+            <img src="https://www.museum.uec.ac.jp/images/room3.jpg">
+            <div>
+              <span class="text-3xl font-bold">第三展示室</span>
+              <span class="text-lg">通信機の歴史</span>
+            </div>
+          </div>
+          <div class="room-content">
+            世界に1台しか現存していない世界最初のダイバーシティラジオ HALLI-CRAFTERS DD-1や、歴史的な無線通信機を数多く展示しています。
+            <div class="mt-1 text-end">
+              <a href="./exhibits.html?room=3" class="px-2 border-b">
+                <span class="align-top font-bold">展示品一覧</span>
+                <span class="align-top material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img">
+            <img src="https://www.museum.uec.ac.jp/images/room4.jpg">
+            <div>
+              <span class="text-3xl font-bold">第四展示室</span>
+              <span class="text-lg">気象衛星と通信</span>
+            </div>
+          </div>
+          <div class="room-content">
+            本学に設置されていた気象衛星「ひまわり」の受信装置（MDUS）と、気象庁気象衛星通信所に最初に設置されたデータ処理装置を展示しています。
+            <div class="mt-1 text-end">
+              <a href="./exhibits.html?room=4" class="px-2 border-b">
+                <span class="align-top font-bold">展示品一覧</span>
+                <span class="align-top material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img">
+            <img src="https://www.museum.uec.ac.jp/images/room5.jpg">
+            <div>
+              <span class="text-3xl font-bold">第五展示室</span>
+              <span class="text-lg">無線電信講習所</span>
+            </div>
+          </div>
+          <div class="room-content">
+            本学の前身である無線電信講習所の教室を再現しています。実際にモールス信号を送受信して当時の授業の様子を体験することができます。また、希少な1925年製のN&K社 マグネチックホーンスピーカーも展示しています。
+            <div class="mt-1 text-end">
+              <a href="./exhibits.html?room=5" class="px-2 border-b">
+                <span class="align-top font-bold">展示品一覧</span>
+                <span class="align-top material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img">
+            <img src="https://www.museum.uec.ac.jp/images/room6.jpg">
+            <div>
+              <span class="text-3xl font-bold">第六展示室</span>
+              <span class="text-lg">真空管の歴史</span>
+            </div>
+          </div>
+          <div class="room-content">
+            フレミングの法則で有名なフレミングが20世紀初頭に発明した最初期の2極管から、第二次世界大戦当時に使われていた国内外の軍用管、オーディオ管、撮像管/受像管、マイクロ波管など、多くの真空管を展示しています。
+            <div class="mt-1 text-end">
+              <a href="./exhibits.html?room=6" class="px-2 border-b">
+                <span class="align-top font-bold">展示品一覧</span>
+                <span class="align-top material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img">
+            <img src="https://www.museum.uec.ac.jp/images/room7.jpg">
+            <div>
+              <span class="text-3xl font-bold">第七展示室</span>
+              <span class="text-lg">電通大の歴史</span>
+            </div>
+          </div>
+          <div class="room-content">
+            日本最初の核磁気共鳴装置（NMR）を展示しています。現在の先端医療に欠くことのできないMRIの原型が本学で発明されたことを目の当たりにすることができます。また、本学で発明された技術により開発された日本初の電波時計も展示しています。
+            <div class="mt-1 text-end">
+              <a href="./exhibits.html?room=7" class="px-2 border-b">
+                <span class="align-top font-bold">展示品一覧</span>
+                <span class="align-top material-symbols-outlined">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="intro-video">

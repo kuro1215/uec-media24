@@ -10,26 +10,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="./css/top.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-  <div id="loader" style="display: none;">
-    <div class="loader-text text-center font-bold text-6xl">
-      <span>ようこそ、</span>
-      <span>無線通信の世界へ</span>
+  <div id="loader">
+    <div class="loader-img-container order-first">
+      <img class="" src="https://www.museum.uec.ac.jp/database/sf/sf450/pf450/p472.jpg">
+      <img class="" src="https://www.museum.uec.ac.jp/database/sf/sf100/pf100/p126.jpg">
     </div>
-    <div class="loader-text text-center text-3xl">
-      <span class="text-nowrap ">Hello, world<br>of electricity and communications</span>
+    <div class="loader-img-container order-last">
+      <img class="" src="https://www.museum.uec.ac.jp/database/sf/sf700/pf700/p744.jpg">
+      <img class="" src="https://www.museum.uec.ac.jp/database/sf/sf250/pf250/p290ed.jpg">
     </div>
-    <img class="img1" src="https://www.museum.uec.ac.jp/database/sf/sf450/pf450/p472.jpg">
-    <img class="img2" src="https://www.museum.uec.ac.jp/database/sf/sf450/pf450/p472.jpg">
-    <img class="img3" src="https://www.museum.uec.ac.jp/database/sf/sf450/pf450/p472.jpg">
+    <div class="loader-text text-center">
+      <div class="font-bold text-6xl">
+        <div>ようこそ、</div>
+        <div><span>無線通信の</span><span>世界へ</span></div>
+      </div>
+      <div class="text-3xl pt-6">
+        <div>Hello, world</div>
+        <div>of electricity and communications</div>
+      </div>
+    </div>
   </div>
 
-  <header class="h-16" role="banner">
-    <div class="h-16 flex justify-between">
-      <a class="block m-3 " href="./index.html" >
+  <header>
+    <div class="h-full flex items-center justify-between">
+      <a class="block m-3" href="./index.html" >
         <img src="https://www.museum.uec.ac.jp/images/uec-museum-logo-64-home.png" alt="UEC Museum" class="w-48">
       </a>
       <button id="menu-button">
@@ -38,9 +46,9 @@
       </button>
     </div>
     <nav id="head-nav">
-      <details class="nav-content ">
-        <summary>ご利用案内</summary>
-        <div class="nav-indent">
+      <div class="nav-box">
+        <span class="nav-content">ホーム</span>
+        <div class="nav-sub">
           <a class="nav-content" href="./guide.html">
             <span>ご利用・ご見学案内</span>
           </a>
@@ -48,34 +56,21 @@
             <span>アクセス</span>
           </a>
         </div>
-      </details>
-      <details class="nav-content ">
-        <summary>展示室案内</summary>
-        <div class="nav-indent">
+      </div>
+      <div class="nav-box">
+        <span class="nav-content">展示室案内</span>
+        <div class="nav-sub">
           <a class="nav-content" href="./rooms.html">
-            <span>展示室紹介</span>
+            <span>展示室</span>
           </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room1/">
-            <span>第一展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room2/">
-            <span>第二展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room3/">
-            <span>第三展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room4/">
-            <span>第四展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room5/">
-            <span>第五展示室</span>
-          </a>
-          <a class="nav-content" href="https://www.museum.uec.ac.jp/room6/">
-            <span>第六展示室</span>
+          <a class="nav-content" href="./exhibits.html">
+            <span>展示品紹介</span>
           </a>
         </div>
-      </details>
-      <a class="nav-content" href="https://www.museum.uec.ac.jp/staff/">学術調査員</a>
+      </div>
+      <div class="nav-box">
+        <a class="nav-content" href="https://www.museum.uec.ac.jp/staff/">学術調査員</a>
+      </div>
     </nav>
   </header>
 
@@ -129,6 +124,7 @@
         <div class="rooms-title">
           <h2>展示室一覧</h2>
           <a class="link-button" href="rooms.html#floor-map">
+            <span class="material-symbols-outlined">map</span>
             <span>フロアマップ</span>
           </a>
         </div>
@@ -142,7 +138,7 @@
           </div>
           <div class="room-content">
             <span class="text-3xl font-bold">第一展示室</span>
-            <span class="text-lg">無線機の歴史</span>
+            <span class="text-lg">無線通信機の歴史</span>
           </div>
         </a>
         <a href="https://www.museum.uec.ac.jp/room2/">
@@ -168,7 +164,7 @@
           </div>
           <div class="room-content">
             <span class="text-3xl font-bold">第三展示室</span>
-            <span class="text-lg">通信の歴史</span>
+            <span class="text-lg">通信機の歴史</span>
           </div>
         </a>
         <a href="https://www.museum.uec.ac.jp/room4/">
@@ -181,7 +177,7 @@
           </div>
           <div class="room-content">
             <span class="text-3xl font-bold">第四展示室</span>
-            <span class="text-lg">通信の歴史</span>
+            <span class="text-lg">気象衛星と通信</span>
           </div>
         </a>
         <a href="https://www.museum.uec.ac.jp/room5/">
@@ -194,7 +190,7 @@
           </div>
           <div class="room-content">
             <span class="text-3xl font-bold">第五展示室</span>
-            <span class="text-lg">通信の歴史</span>
+            <span class="text-lg">無線電信講習所</span>
           </div>
         </a>
         <a href="https://www.museum.uec.ac.jp/room6/">
@@ -207,18 +203,33 @@
           </div>
           <div class="room-content">
             <span class="text-3xl font-bold">第六展示室</span>
-            <span class="text-lg">通信の歴史</span>
+            <span class="text-lg">真空管の歴史</span>
+          </div>
+        </a>
+        <a href="https://www.museum.uec.ac.jp/room7/">
+          <div class="room-bg scroll-left">
+            <img src="https://www.museum.uec.ac.jp/images/room7.jpg">
+            <img src="https://www.museum.uec.ac.jp/images/room7.jpg">
+            <img src="https://www.museum.uec.ac.jp/images/room7.jpg">
+            <img src="https://www.museum.uec.ac.jp/images/room7.jpg">
+            <img src="https://www.museum.uec.ac.jp/images/room7.jpg">
+          </div>
+          <div class="room-content">
+            <span class="text-3xl font-bold">第七展示室</span>
+            <span class="text-lg">電通大の歴史</span>
           </div>
         </a>
       </section>
     </section>
     <section id="guides">
       <h2 class="text-3xl">ご利用案内</h2>
-      <div>
+      <div class="guides-container">
         <a class="link-button" href="guide.html">
+          <span class="material-symbols-outlined">local_library</span>
           <span>ご利用・ご見学案内</span>
         </a>
         <a class="link-button" href="access.html">
+          <span class="material-symbols-outlined">pin_drop</span>
           <span>アクセス</span>
         </a>
       </div>
@@ -251,7 +262,7 @@
   </footer>
 
   <script type="module" src="./js/common.js"></script>
-  <script type="module" src="./js/top.js"></script>
+  <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

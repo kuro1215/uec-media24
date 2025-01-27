@@ -1,0 +1,40 @@
+{
+    "7": [
+        {
+            "name": "高分解能核磁気共鳴装置用マグネット",
+            "type_name": "",
+            "manufacturer": "電気通信大学",
+            "manufacture_year": "1949年～1950年",
+            "description": "高分解能NMR(Nuclear Magnetic Resonance / 核磁気共鳴)は、磁石・装置ともに日本で初めて電通大が制作しました。当時、世界で初めて様々な物質の原子核の磁性を測定し、その後の化学や薬学、医療における発展に大きく貢献しました。\nこの装置は、例えるならば、物質のミクロな世界を覗き込むことができる特殊な顕微鏡です。原子核の磁性を精密に測定することで、物質の構造や性質を原子レベルで解き明かすことができます。\n現代では、病院でよく見かけるMRIも、この装置の技術を応用したものです。",
+            "detail_url": "https://www.museum.uec.ac.jp/database/sf/sf550/s576.html",
+            "image_url": "https://www.museum.uec.ac.jp/database/sf/sf550/pf550/p576.jpg"
+        },
+        {
+            "name": "超伝導マグネット",
+            "type_name": "",
+            "manufacturer": "オックスフォード社",
+            "manufacture_year": "1980年代",
+            "description": "超伝導マグネットは、電気抵抗がゼロになる超伝導状態を利用した、強力な磁石です。\n従来の電磁石と比べてはるかに強い磁場を発生させることができ、リニアモーターカーを浮上させる、医療現場でMRI検査に用いるなど、様々な分野で活躍しています。",
+            "detail_url": "https://www.museum.uec.ac.jp/database/sf/sf550/s575.html",
+            "image_url": "https://www.museum.uec.ac.jp/database/sf/sf550/pf550/p575.jpg"
+        },
+        {
+            "name": "ESR電子スピン共鳴装置",
+            "type_name": "",
+            "manufacturer": "Varian社",
+            "manufacture_year": "1969年頃",
+            "description": "ESR電子スピン共鳴装置は、物質中の電子の状態を調べることで、その物質の性質を解き明かす装置です。電子の状態を調べることで、物質の化学的な性質や反応性などを詳しく知ることができます。\nESRは、材料科学、化学、生物学、医学など、幅広い分野で利用されています。例えば、プラスチックやゴムなどの高分子材料の劣化や、食品の酸化、生体内のフリーラジカルの研究などに役立っています。",
+            "detail_url": "https://www.museum.uec.ac.jp/database/sf/sf550/s577.html",
+            "image_url": "https://www.museum.uec.ac.jp/database/sf/sf550/pf550/p577.jpg"
+        },
+        {
+            "name": "電波時計",
+            "type_name": "アキュラテック",
+            "manufacturer": "国際電気",
+            "manufacture_year": "1962年頃",
+            "description": "電波時計は電通大で発明され、国際電気によって製作されました。合計で6000台を売り上げ、京王電鉄の電車内にもかけられました。",
+            "detail_url": "https://www.museum.uec.ac.jp/database/sf/sf550/s578.html",
+            "image_url": "https://www.museum.uec.ac.jp/database/sf/sf550/pf550/p578.jpg"
+        }
+    ]
+}

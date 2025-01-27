@@ -1,26 +1,19 @@
-import { SwitchHeaderWidth } from './constants.js';
+window.addEventListener('DOMContentLoaded', OnDOMContentLoaded);
 
-const menuButton = document.getElementById('menu-button');
-const headNav = document.getElementById('head-nav');
-var headNavOpen = false;
+function OnDOMContentLoaded() {
+    const headNav = document.getElementById('head-nav');
+    headNav.classList.add('nav-close');
+    document.getElementById('menu-button').addEventListener('click', () => toggleNav(headNav));
 
-window.addEventListener('load', OnLoad);
-window.addEventListener('resize', OnResize);
-
-function OnLoad() {
-  headNavOpen = window.innerWidth > SwitchHeaderWidth;
-  document.getElementById('menu-button').addEventListener('click', () => {
-    headNav.style.display = headNavOpen ? 'none' : 'flex';
-    headNavOpen = !headNavOpen;
-  });
+    const boxes = headNav.getElementsByClassName('nav-box');
+    for (let i = 0; i < boxes.length; i++) {
+        const subs = boxes[i].getElementsByClassName('nav-sub');
+        if (subs.length > 0) {
+            subs[0].classList.add('nav-close');
+            boxes[i].addEventListener('click', () => toggleNav(subs[0]));
+        }
+    }
 }
-
-function OnResize() {
-  if (window.innerWidth > SwitchHeaderWidth) {
-    headNav.style.display = 'flex';
-    headNavOpen = true;
-  } else {
-    headNav.style.display = 'none';
-    headNavOpen = false;
-  }
+function toggleNav(target) {
+    target.classList.toggle('nav-close');
 }

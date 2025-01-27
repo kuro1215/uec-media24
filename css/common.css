@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 
 :root {
   --main-max-width: 960px;
@@ -12,37 +12,63 @@ header {
   height: 64px;
 
   display: flex;
+  justify-content: space-between;
   background-color: rgb(147 197 253);
-}
-nav {
-  display: flex;
-  text-align: start;
-  color: white;
-  background-color: rgb(30 64 175);
 }
 #menu-button {
   display: block;
   width: 64px;
   height: 64px;
-  background-color: rgb(30 64 175);
-  color: white;
   text-align: center;
   line-height: 64px;
+
+  color: white;
+  background-color: rgb(30 64 175);
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+nav {
+  display: flex;
+  text-align: start;
+  color: white;
+  background-color: rgb(30 64 175);
+
+  --max-nav-count: 2;
+  --nav-border-height: 2px;
+  --nav-border-color: rgb(156 163 175);;
+  --nav-margin: 6px;
+}
+.nav-box {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.nav-content {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.nav-box > span.nav-content::before {
+  content: '▼';
+  display: inline-block;
+  width: 1.5rem;
+}
+.nav-sub {
+  display: block;
+}
+.nav-close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
   header {
     flex-direction: column;
+    align-items: stretch;
   }
   nav {
-    display: none;
     flex-direction: column;
-    transform-origin: top;
-
-    --nav-border-height: 2px;
-    --nav-border-color: rgb(156 163 175);;
-    --nav-margin: 6px;
+    padding: 1rem;
   }
   nav::after {
     content: '';
@@ -54,12 +80,9 @@ nav {
   }
   .nav-content {
     display: block;
+    position: relative;
   }
-  nav .nav-indent {
-    margin-top: 3px;
-    margin-left: 20px;
-  }
-  .nav-content + .nav-content::before {
+  .nav-box + .nav-box::before {
     content: '';
     display: block;
     height: var(--nav-border-height);
@@ -67,60 +90,69 @@ nav {
     margin-top: calc(var(--nav-margin) - 2px);
     margin-bottom: var(--nav-margin);
   }
-  .nav-indent::before {
-    content: '';
-    display: block;
-    height: var(--nav-border-height);
-    border-bottom: var(--nav-border-height) dotted var(--nav-border-color);
-    margin-top: calc(var(--nav-margin) - 2px);
-    margin-bottom: var(--nav-margin);
-  }
+
   .nav-sub {
-    margin-top: 3px;
-    margin-left: 20px;
+    margin-top: 0.5rem;
+    margin-left: 1.4rem;
   }
-  .nav-sub::before {
+  .nav-sub .nav-content {
+    padding: 0.5rem 0.1rem;
+  }
+  .nav-sub a.nav-content::before {
+    position: absolute;
+    top: calc(var(--nav-border-height) / -2);
+    left: -1px;
+    width: 100%;
+
     content: '';
     display: block;
     height: var(--nav-border-height);
     border-bottom: var(--nav-border-height) dotted var(--nav-border-color);
-    margin-top: calc(var(--nav-margin) - 2px);
-    margin-bottom: var(--nav-margin);
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   header {
     flex-direction: row;
+    align-items: end;
   }
   nav {
+    max-width: 600px;
     flex-grow: 1;
-    justify-content: space-around;
+  }
+  nav.nav-close {
+    display: flex;
   }
   #menu-button {
     display: none;
   }
 
-
-  .nav-content {
-    width: 100%;
-    display: block;
-    height: 64px;
-
+  .nav-box {
+    border: var(--nav-border-height) solid slategray;
+    border-bottom: none;
+  }
+  .nav-box + .nav-box {
+    border-left: none;
   }
   .nav-sub {
     position: absolute;
     top: 100%;
-    text-align: center;
-
-    background-color: rgb(30 64 175);
+    left: 0;
+    width: 100%;
+    background-color: rgb(80, 97, 150);
   }
-  .nav-sub::before {
+  .nav-content {
+    padding: 0.8rem 1rem;
+  }
+  a.nav-content + a.nav-content::before {
+    position: absolute;
+    top: calc(var(--nav-border-height) / -2);
+    left: -1px;
+    width: 100%;
+
     content: '';
     display: block;
     height: var(--nav-border-height);
     border-bottom: var(--nav-border-height) dotted var(--nav-border-color);
-    margin-top: calc(var(--nav-margin) - 2px);
-    margin-bottom: var(--nav-margin);
   }
 }
 
@@ -149,7 +181,10 @@ ul li {
 }
 
 .link-button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
   border: 2px solid rgb(30 41 59);
   border-radius: 0.5rem;
