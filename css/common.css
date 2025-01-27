@@ -3,6 +3,9 @@
 :root {
   --main-max-width: 960px;
 }
+:target {
+  scroll-margin-top: 80px;
+}
 
 header {
   position: fixed;
