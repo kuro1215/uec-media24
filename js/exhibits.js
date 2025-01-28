@@ -58,7 +58,8 @@ function ChangedExhibitsRoom() {
     const selected = document.getElementById('exhibits-list-select').value;
     if (selected === '0') {
         listedData = [];
-        for (let key in exhibitsData) listedData.concat(exhibitsData[key]);
+        for (let key in exhibitsData)
+            listedData = listedData.concat(exhibitsData[key]);
     } else {
         listedData = exhibitsData[selected];
     }
@@ -77,7 +78,6 @@ function ChangedExhibitsRoom() {
 
 function UpdateDescription() {
     const size = window.getComputedStyle(document.body).getPropertyValue('--image-size');
-    console.log(Number.parseInt(size));
     const idx = Math.floor(exhibitsList.scrollLeft / Number.parseInt(size));
     if (idx < 0 || idx >= listedData.length || idx == currentIndex) return;
     imageDescription.innerHTML = '';

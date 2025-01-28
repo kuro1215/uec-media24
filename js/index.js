@@ -90,7 +90,6 @@ function InitLoader() {
 	for (let i = 0; i < imgs.length; i++) {
 		const j = Math.floor(Math.random() * (imgs.length - i)) + i;
 		[imgs[i], imgs[j]] = [imgs[j], imgs[i]];
-		console.log(i);
 		imgs[i].animate(animation, { ...animationOptions, delay: LoaderFadeinDuration * (i + 0.5) });
 	}
 
